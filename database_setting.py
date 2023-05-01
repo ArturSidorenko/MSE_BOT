@@ -216,7 +216,7 @@ if __name__ == "__main__":
         print(f'Downloading schedule for {group}, doc={doc_id}, sheet={sheet_id}')
         while True:
             try:
-                df = download_from_the_site(doc_id, sheet_id, file_name)
+                df = download_from_the_site(doc_id, sheet_id, None)
             except URLError:
                 print('Ошибка соединения: заново скачиваю')
             break
